@@ -2,8 +2,8 @@ import requests
 from datetime import datetime
 import smtplib
 import time
-MY_LAT = 32.933825  # Your latitude
-MY_LONG = -117.161757  # Your longitude
+MY_LAT =   # Your latitude
+MY_LONG =   # Your longitude
 
 
 def is_iss_overhead():
@@ -45,7 +45,7 @@ while True:
     if is_iss_overhead() and is_night():
         connection = smtplib.SMTP("smtp.gmail.com")
         connection.starttls()
-        connection.login("zyaustinli@gmail.com", "kvgcvndqghhxvjmw")
+        connection.login("zyaustinli@gmail.com", "")
         connection.sendmail(
             from_addr="zyaustinli@gmail.com",
             to_addrs="zyaustinli@gmail.com",
